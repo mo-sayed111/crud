@@ -1,0 +1,80 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <div class="container py-5">
+
+
+        <form>
+
+            <div class="mb-3">
+
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" class="form-control">
+            </div>
+
+            <div class="mb-3">
+
+                <label for="productPrice">Product Price</label>
+                <input type="number" id="productPrice" class="form-control">
+            
+            </div>
+
+            <div class="mb-3">
+
+                <label for="productCategory">Product Category</label>
+                <select class="form-select" id="productCategory">
+
+                    <option value="tv">Tv</option>
+                    <option value="mobile">mobile</option>
+                    <option value="Labtop">Labtop</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+
+                <label for="productDescription">Product Description</label>
+                <textarea id="productDescription" class="form-control"></textarea>
+            </div>
+
+
+            <button type="button" id="btn-add" onclick="addProduct()" class="btn btn-outline-info ">Add Product</button>
+            <button style="display: none;"  id="btn-edit" type="button" onclick="addEdit()" class="btn btn-outline-info ">Add edit</button>
+            <button type="button" class="btn btn-outline-danger " onclick="clearForm()" >clear Form</button>
+        </form>
+
+        <input type="text" id="searchInput" onkeyup="search()"  class="form-control w-50 mx-auto my-5" placeholder="Search Name or category.....">
+
+        <table class="table table-striped  table-bordered  text-center">
+
+
+            <thead>
+                <th>index</th>
+                <th>product Name</th>
+                <th>product price</th>
+                <th>product category</th>
+                <th>product Description</th>
+                <th>update</th>
+                <th>delete</th>
+            </thead>
+
+            <tbody id="tableBody">
+
+               
+              
+               
+            </tbody>
+        </table>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
